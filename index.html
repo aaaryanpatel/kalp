@@ -20,16 +20,33 @@
             color: #555;
         }
 
+        .heart-container {
+            position: relative;
+            margin-top: 10px;
+            animation: heartbeat 1s infinite;
+        }
+
         .heart {
             color: red;
             font-size: 24px;
-            margin-top: 10px;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>I'm Sorry <span class="heart">❤</span></h1>
+    <h1>I'm Sorry <span class="heart-container"><span class="heart">❤</span></span></h1>
     <p>Dear [Friend's Name],</p>
     <p>I wanted to take a moment to apologize for any hurt or frustration I may have caused. It was not my intention, and I value our friendship. I hope we can talk and work things out. Please accept my sincere apology.</p>
     <p>Best regards,<br>[Your Name]</p>
